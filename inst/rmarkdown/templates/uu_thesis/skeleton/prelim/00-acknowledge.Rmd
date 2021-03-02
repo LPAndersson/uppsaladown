@@ -1,3 +1,4 @@
-# Acknowledgements {-}
+<!-- # Acknowledgements {-}  -->
+# Författarens tack {-}
 
 I want to thank a few people.

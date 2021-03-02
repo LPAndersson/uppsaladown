@@ -1,4 +1,6 @@
-# Conclusion
+<!-- # Conclusion -->
+# Slutsatser {#sec:slutsats}
+
 
 * Give a short summary of what has been done and what has been found.
 

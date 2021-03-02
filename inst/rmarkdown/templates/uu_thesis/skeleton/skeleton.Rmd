@@ -1,17 +1,11 @@
 ---
-#
 # Required Information --------------------------------------------------------
-# change lines 5 - 15
-title: "Thesis Title"
-#type: "Bachelor's / Master's Thesis"
-#type: "Kandidatuppsats"
+swedish: TRUE # FALSE for english
+title: "UPPSATSENS TITEL"
 author: "Inge Tabell"
 year: "20yy"
-university: "Uppsala University"
-institute: "Department of Statistics" 
-advisor: "Prof. Dr. Efraim Stolle"
-#program: "Master of Science in Statistics"
-#
+advisor: "Efraim Stolle"
+
 # Optional Information --------------------------------------------------------
 # comment out if unnecessary
 abstract: |  
@@ -22,18 +16,21 @@ abbreviations: |
   `r if(knitr:::is_latex_output()) paste(readLines("prelim/00-abbreviations.Rmd"), collapse = '\n  ')`
 lot: true                              # list of tables
 lof: true                              # list of figures
-link-citations: true
+
 bibliography: bib/references.bib       # bibliography file
 #
 # Rendering Options -----------------------------------------------------------
 #
 knit: "bookdown::render_book"
 output: 
-  huwiwidown::thesis_pdf  
+  uppsalaDown::thesis_pdf  
 space_between_paragraphs: true       # if you want spaces bt paragraph
 # header-includes:     # if including additional latex packages or commands
   # - \setlength{\parindent}{17pt}
 ---
+
+
+
 
 <!--
 Above is the YAML (YAML Ain't Markup Language) header that includes a lot of
@@ -71,10 +68,7 @@ everything below this.
 
 # About this Thesis Template {-}
 
-Welcome to the thesis template. This template is based on (and in many places 
-copied directly from) the HU Berlin School of Business and Economics LaTeX 
-template, but hopefully it will provide a nicer interface for those that have
-never used LaTeX before. 
+Welcome to the thesis template. This template is based on the huwiwidown template package.
 
 ## Why use R Markdown? {-}
 

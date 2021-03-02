@@ -1,21 +1,27 @@
-% This is the HU Berlin LaTeX template, optimized for R Markdown.
-
 % -------------------------------
 % --- PREAMBLE ---
 % -------------------------------
 \documentclass[a4paper,11pt]{article}
 
+$if(swedish)$
+\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+$endif$
+
+
 \usepackage{amsmath,amssymb,amsfonts,amsthm}    % Typical maths resource packages
 \usepackage{graphicx}                           % Packages to allow inclusion of graphics
-\usepackage[authoryear]{natbib}                 % literature reference style
+%\usepackage[authoryear]{natbib}                 % literature reference style
+\usepackage{natbib}
 \usepackage[bf]{caption}
 \usepackage{textcomp}                           % For single quotes
 \usepackage{floatrow}                           % For image and table position
 \usepackage{booktabs}                           % For tables
+\usepackage[hidelinks]{hyperref}
 % \usepackage[colorlinks=true]{hyperref}                           
 % \usepackage[bottom]{footmisc}                   
 \usepackage[bottom, flushmargin]{footmisc}                   % For footnotes
-\usepackage[citebordercolor={0 1 0}]{hyperref}                           % For creating hyperlinks in cross references
+%\usepackage[citebordercolor={0 1 0}]{hyperref}                           % For creating hyperlinks in cross references
 \usepackage{footnotebackref}
 
 % -------------------------------
@@ -30,7 +36,7 @@
 \ohead{\headmark}
 
 % define citation style
-\bibliographystyle{ecta}
+\bibliographystyle{apalike}
 
 % define page size, margin size
 \setlength{\headheight}{1.1\baselineskip}
@@ -53,11 +59,10 @@ $endif$
 % define position of graphics
 \floatsetup[figure]{capposition=bottom}
 \floatsetup[table]{capposition=bottom}
-\floatplacement{figure}{ht}
-\floatplacement{table}{ht}
+\floatplacement{figure}{tb}
+\floatplacement{table}{tb}
 
 % save thesis parameters for later
-\newcommand{\thesistype}{$type$}
 \newcommand{\thesisauthor}{$author$}
 \newcommand{\thesisdate}{$date$}
 
@@ -104,30 +109,72 @@ $endfor$
 
 \begin{document}
 % -------------------------------
-% --- frontmatter: Title page ---
+% --- frontmatter: Swedish title page ---
 % -------------------------------
+$if(swedish)$
 \thispagestyle{empty}
-\begin{center}
 \begin{center}
 \includegraphics[width=7cm]{UU_logo_CMYK.eps}
 \end{center}
+\vspace{1.5cm}
 \begin{center}
-\begin{Huge}
-$title$
-\end{Huge}
-\vskip2cm
-\large By $author$\par
-\vskip2cm
-%Independent Thesis Advanced Level\par
-$institute$\par
-$university$\par
-\vskip2cm
-\large Supervisor: $advisor$ \par
-\vskip1cm
-$year$
+\begin{Large}
+{\bf $title$} 
+\end{Large}
 \end{center}
-  
+\vskip2.5cm
+\renewcommand{\baselinestretch}{1}
+\begin{center}
+{\large\it Av} \\
+{\large $author$} 
+
+\vskip2.5cm
+\begin{center}
+\begin{large}
+{\it Kanditatuppsats i statistik}\\
+\end{large}
 \end{center}
+\vskip2cm
+{\large\it Handledare}\\
+{\large $advisor$} 
+\vskip2cm
+{\large $year$} 
+\end{center}\vfill
+$else$
+
+% -------------------------------
+% --- frontmatter: English title page ---
+% -------------------------------
+\thispagestyle{empty}
+\begin{center}
+\includegraphics[width=7cm]{UU_logo_CMYK.eps}
+\end{center}
+\vspace{1.5cm}
+\begin{center}
+\begin{Large}
+{\bf $title$} 
+\end{Large}
+\end{center}
+\vskip2.5cm
+\renewcommand{\baselinestretch}{1}
+\begin{center}
+{\large\it Submitted by} \\
+{\large $author$} 
+
+\vskip2.5cm
+\begin{center}
+\begin{large}
+{\it Bachelor's thesis in Statistics}\\
+\end{large}
+\end{center}
+\vskip2cm
+{\large\it Advisor}\\
+{\large $advisor$} 
+\vskip2cm
+{\large $year$} 
+\end{center}\vfill
+$endif$
+
 
 % ------------------------------------
 % --- frontmatter: Acknowledgement ---
@@ -167,7 +214,11 @@ $endif$
 $if(lof)$
 \newpage
 \listoffigures
+$if(swedish)$
+\addcontentsline{toc}{section}{Figurer}
+$else$
 \addcontentsline{toc}{section}{List of Figures}
+$endif$
 $endif$
 
 % ---------------------------------------------------
@@ -176,7 +227,11 @@ $endif$
 $if(lot)$
 \newpage
 \listoftables
+$if(swedish)$
+\addcontentsline{toc}{section}{Tabeller}
+$else$
 \addcontentsline{toc}{section}{List of Tables}
+$endif$
 $endif$
 
 % -------------------------------
@@ -191,11 +246,6 @@ $body$
 
 % change rmd_files in `_bookdown.yml` files to determine order
 % note that references and appendix are also contained here.
-
-% --------------------------------------------
-% --- last page: Declaration of Authorship ---
-% --------------------------------------------
-
 
 
 \end{document}

@@ -1,6 +1,8 @@
 \newpage
 
-# References {-}
+# Källförteckning {-}
+<!-- # References {-} -->
+
 
 <!--
 To remove the indentation of the first entry.
