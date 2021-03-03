@@ -1,0 +1,4 @@
+<!-- # Abstract {-} -->
+# Sammanfattning {-}
+
+A clearly worded, short, precise, abstract of no more than 300 Words; No formulas; Avoid references utmost; Same tense; No indentation or enumeration etc.; Write in normal text (no italic, bold or underline)

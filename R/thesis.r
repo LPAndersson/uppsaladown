@@ -1,7 +1,7 @@
 #' Creates an R Markdown PDF Thesis document
 #'
 #' This is a function called in output in the YAML of the driver Rmd file to
-#' specify using the HU Berlin School of Business and Economics LaTeX template.
+#' specify using the Uppsala university Statistics department LaTeX template.
 #'
 #' @export
 #' @param toc A Boolean (TRUE or FALSE) specifying whether table of contents
@@ -11,11 +11,9 @@
 #' "default", "tango", "pygments", "kate", "monochrome", "espresso", "zenburn",
 #' and "haddock". Pass NULL to prevent syntax highlighting.
 #' @param ... Additional parameters to pass to `pdf_book()`.
-#' @return A modified \code{pdf_document} based on the HU Berlin School of
-#' Business and Economics LaTeX template.
 #' @examples
 #' \dontrun{
-#'  output: huwiwi::thesis_pdf
+#'  output: uppsalaDown::thesis_pdf
 #' }
 thesis_pdf <- function(toc = TRUE, toc_depth = 3, highlight = "default", ...) {
 
@@ -55,7 +53,7 @@ fix_envs = function(x) {
     (i1 - 1)[grepl("^\\s*$", x[i1 - 1])]
   }
   i3      <- c(
-    i3, 
+    i3,
     if (length(i2 <- grep(end_reg, x))) {
       (i2 + 1)[grepl("^\\s*$", x[i2 + 1])]
     }
