@@ -1,4 +1,4 @@
-Package: uppsalaDown
+Package: uppsaladown
 Title: An R Markdown thesis template for use at Uppsala University Department of Statistics using the bookdown package
 Version: 0.1.0
 Authors@R: c(
