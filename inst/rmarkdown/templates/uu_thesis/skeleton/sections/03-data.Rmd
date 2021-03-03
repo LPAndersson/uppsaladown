@@ -21,6 +21,7 @@
 * For example:
 
 ```{r table1, echo=FALSE}
+library(dplyr)
 col_names <- c(
   "3m", "6m", "1yr", "2yr", "3yr", "5yr", "7yr", "10yr", "12yr", "15yr"
 )
@@ -44,7 +45,7 @@ knitr::kable(
   escape = FALSE
 ) %>%
 kable_styling(latex_options = c("HOLD_position")) %>%
-row_spec(2, hline_after = T)
+kableExtra::row_spec(2, hline_after = T)
 ```
 
 * Allows the reader to judge whether the sample is biased or to evaluate 
