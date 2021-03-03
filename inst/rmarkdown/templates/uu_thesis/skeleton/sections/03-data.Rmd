@@ -44,7 +44,7 @@ knitr::kable(
   col.names = col_names, 
   escape = FALSE
 ) %>%
-kable_styling(latex_options = c("HOLD_position")) %>%
+kableExtra:::kable_styling(latex_options = c("HOLD_position")) %>%
 kableExtra::row_spec(2, hline_after = T)
 ```
 
