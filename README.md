@@ -60,6 +60,8 @@ following code:
 rmarkdown::draft("index.Rmd", template = "uu_thesis", package = "uppsaladown")
 ```
 
+Note that it may be necessary to restart RStudio for this to work.
+
 ### Rendering
 
 To render your thesis, you can open `index.Rmd` in RStudio and then hit the
