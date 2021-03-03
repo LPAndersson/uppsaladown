@@ -1,6 +1,6 @@
-# uppsalaDown
+# uppsaladown
 
-The `uppsalaDown` package provides a template for writing a thesis at the Department 
+The `uppsaladown` package provides a template for writing a thesis at the Department 
 of Statistics at Uppsala University. The package is modified version of the `huwiwidown` package.
 
 Users write in `R Markdown` (which is basically a flavor of the `Markdown`
@@ -41,7 +41,7 @@ if (!require("devtools")) {
   install.packages("devtools", repos = "http://cran.rstudio.org")
 }
 install.packages("bookdown")
-devtools::install_github("lpandersson/uppsalaDown")
+devtools::install_github("lpandersson/uppsaladown")
 ```
 3. Create a New R Markdown document:
 
@@ -57,7 +57,7 @@ If you're not using RStudio, navigate to an empty directory and then run the
 following code:
 
 ```r
-rmarkdown::draft("index.Rmd", template = "uu_thesis", package = "uppsalaDown")
+rmarkdown::draft("index.Rmd", template = "uu_thesis", package = "uppsaladown")
 ```
 
 ### Rendering

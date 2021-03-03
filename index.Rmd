@@ -23,7 +23,7 @@ bibliography: bib/references.bib       # bibliography file
 #
 knit: "bookdown::render_book"
 output: 
-  uppsalaDown::thesis_pdf  
+  uppsaladown::thesis_pdf  
 space_between_paragraphs: true       # if you want spaces bt paragraph
 # header-includes:     # if including additional latex packages or commands
   # - \setlength{\parindent}{17pt}
@@ -51,7 +51,7 @@ if (!require(devtools)) {
   install.packages("devtools", repos = "http://cran.rstudio.com")
 }
 if (!require(huwiwidown)) {
-  devtools::install_github("lpandersson/uppsalaDown")
+  devtools::install_github("lpandersson/uppsaladown")
   library(huwiwidown)
 }
 ```
