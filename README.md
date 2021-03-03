@@ -1,6 +1,7 @@
-# uppsalaDown <img src="Hu_Logo_small.png" align="right" width="128px"/>
+# uppsalaDown
 
-The `uppsalaDown` package provides a template for writing a thesis at the Department of Statistics at Uppsala University. The package is modified version of the `huwiwidown` package.
+The `uppsalaDown` package provides a template for writing a thesis at the Department 
+of Statistics at Uppsala University. The package is modified version of the `huwiwidown` package.
 
 Users write in `R Markdown` (which is basically a flavor of the `Markdown`
 markup language but with the ability to incorporate R code chunks using the
@@ -24,9 +25,7 @@ Markdown is a much easier-to-use, lightweight, no-frills markup language. The
 good news is that users can still inject LaTeX code directly into the Markdown
 pages, in the event he/she still wants to write in LaTeX.
 
-This thesis will contain minor differences to the due to limitations in the
-pandoc output, but in general the appearance is almost entirely identical. An
-example of the output can be seen [here](thesis-example.pdf).
+An example of the output can be seen [here](thesis-example.pdf).
 
 ## Usage
 
@@ -37,19 +36,23 @@ example of the output can be seen [here](thesis-example.pdf).
     - [LaTeX](https://www.latex-project.org/get/)
     - [R >= 3.5.1](https://r-project.org)
     - [RStudio](https://rstudio.org) (optional, but it helps)
+
+    A version of pandoc is included with RStudio and LaTeX is installed with bookdown below.
+    So in practice, it should be enough to have R and RStudio installed.
+
 2. Install the necessary packages:
 
 ```r
 if (!require("devtools")) {
   install.packages("devtools", repos = "http://cran.rstudio.org")
 }
-devtools::install_github("rstudio/bookdown")
+install.packages("bookdown")
 devtools::install_github("lpandersson/uppsalaDown")
 ```
 3. Create a New R Markdown document:
 
 File -> New File -> R Markdown... then choose 'From template', then choose
-'HU Thesis", and enter `index` as the **Name**. Note that this will currently
+'UU Thesis", and enter `index` as the **Name**. Note that this will currently
 only **Knit** if you name the directory `index` at this step.
 
 <p align="center">
@@ -114,16 +117,21 @@ before the appendix.
 
 Store your bibliography (as `bibtex` files) here.
 [This website](http://bibdesk.sourceforge.net/) may be helpful in generating the
-`bibtex` file in the correct format.
+`bibtex` file in the correct format. But, in most journal databases, Google scholar etc.,
+there is an option to view the reference in bibtex-format and so copy-pasting that into the bibtex
+file is usually enough.
 
 ### `figures/` and `data/`
 
 Store your figures and data here and reference them in your R Markdown files.
 
-## Structure of Thesis (Suggested)
+## Structure of Thesis
 
-In general, the HU suggests the following structure for the thesis, and what
-files in the template they correspond to:
+The template of the thesis comes with a default structure that may be useful in many cases, 
+but that is not required. Discuss with you advisor what is a good structure for your thesis.
+
+
+The default structure is as follows:
 
 **Frontmatter:**
 
@@ -145,10 +153,6 @@ are:
 - conclusion (`sections/05-conclusion.Rmd`)
 - references (mandatory, auto-generated from template)
 - appendix (not mandatory, `sections/99-appendix.Rmd`)
-
-**Last page:**
-
-- declaration of authorship (mandatory, auto-generated from template)
 
 ## Further Resources
 
