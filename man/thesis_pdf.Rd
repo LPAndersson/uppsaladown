@@ -24,6 +24,6 @@ specify using the Uppsala university Statistics department LaTeX template.
 }
 \examples{
 \dontrun{
- output: uppsalaDown::thesis_pdf
+ output: uppsaladown::thesis_pdf
 }
 }

@@ -13,7 +13,7 @@
 #' @param ... Additional parameters to pass to `pdf_book()`.
 #' @examples
 #' \dontrun{
-#'  output: uppsalaDown::thesis_pdf
+#'  output: uppsaladown::thesis_pdf
 #' }
 thesis_pdf <- function(toc = TRUE, toc_depth = 3, highlight = "default", ...) {
 
