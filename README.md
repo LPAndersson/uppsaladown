@@ -15,15 +15,9 @@ tutorial](https://bookdown.org/yihui/bookdown/).
 
 ## Introduction
 
-Why use this instead of the provided LaTeX template? Though LaTeX is an
-incredibly powerful tool, the learning curve can be difficult and a lot of time
-is spent wasted on finding the correct formatting. This package sacrifices
-some of the expressiveness of LaTeX for the ease of use of Markdown, to allow
-the end user to focus on writing good content.
-
-Markdown is a much easier-to-use, lightweight, no-frills markup language. The
-good news is that users can still inject LaTeX code directly into the Markdown
-pages, in the event he/she still wants to write in LaTeX.
+The purpose of this template is to make it easy to use R and R Studio that you are already
+familiar with to write your thesis. The template uses Markdown which is a easy-to-use, 
+lightweight, no-frills markup language.
 
 An example of the output can be seen [here](thesis-example.pdf).
 
