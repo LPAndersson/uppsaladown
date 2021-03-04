@@ -12,7 +12,8 @@ Imports:
     ggplot2,
     bookdown,
     knitr,
-    here
+    here,
+    kableExtra
 Suggests:
     remotes,
     usethis
