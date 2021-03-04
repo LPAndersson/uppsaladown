@@ -71,7 +71,8 @@ To render your thesis, you can open `index.Rmd` in RStudio and then hit the
 rmarkdown::render("index.Rmd")
 ```
 
-Your thesis will be deposited in the `thesis-output/` directory.
+Your thesis will be deposited in the `thesis-output/` directory. The first time you render
+the thesis, it may take a while. I should be faster after that.
 
 ## Components
 

@@ -1,6 +1,7 @@
 ---
 # Required Information --------------------------------------------------------
-swedish: TRUE # FALSE for english
+swedish: TRUE # FALSE for english. This only changes the automatically generated
+#				content. Section titles etc. will need to be changed by hand. 
 title: "UPPSATSENS TITEL"
 author: "Inge Tabell"
 year: "20yy"

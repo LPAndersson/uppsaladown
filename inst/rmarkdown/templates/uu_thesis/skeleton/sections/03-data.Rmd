@@ -51,6 +51,9 @@ kableExtra::row_spec(2, hline_after = T)
 * Allows the reader to judge whether the sample is biased or to evaluate 
   possible impacts of outliers, for example.
 
+* If your thesis includes code that is slow to run, it is a good idea to include
+  `cache = TRUE` as a chunk option.
+
 * Here tables can be easily integrated using the `kable()` function in the
   `knitr` package (with perhaps some additional help from the `kableExtra`
   package). `kable()` will automatically generate a label for the table
