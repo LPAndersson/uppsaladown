@@ -25,6 +25,13 @@ $endif$
 %\usepackage[citebordercolor={0 1 0}]{hyperref}                           % For creating hyperlinks in cross references
 \usepackage{footnotebackref}
 
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{CSLReferences}%
+{\setlength{\parindent}{0pt}%
+\everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
+{\par}
+
 % -------------------------------
 % --- some layout definitions ---
 % -------------------------------
