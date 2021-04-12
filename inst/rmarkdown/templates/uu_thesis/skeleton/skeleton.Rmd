@@ -19,6 +19,8 @@ lot: true                              # list of tables
 lof: true                              # list of figures
 
 bibliography: bib/references.bib       # bibliography file
+csl: bib/harvard-cite-them-right.csl   # style file. More can be found at https://github.com/citation-style-language/styles
+
 #
 # Rendering Options -----------------------------------------------------------
 #
