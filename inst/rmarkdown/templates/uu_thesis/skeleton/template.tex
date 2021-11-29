@@ -9,7 +9,7 @@ $if(swedish)$
 \usepackage[swedish]{babel}
 $endif$
 
-
+\usepackage{array,longtable}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}    % Typical maths resource packages
 \usepackage{graphicx}                           % Packages to allow inclusion of graphics
 %\usepackage[authoryear]{natbib}                 % literature reference style
@@ -19,8 +19,8 @@ $endif$
 \usepackage{floatrow}                           % For image and table position
 \usepackage{booktabs}                           % For tables
 \usepackage[hidelinks]{hyperref}
-% \usepackage[colorlinks=true]{hyperref}                           
-% \usepackage[bottom]{footmisc}                   
+% \usepackage[colorlinks=true]{hyperref}
+% \usepackage[bottom]{footmisc}
 \usepackage[bottom, flushmargin]{footmisc}                   % For footnotes
 %\usepackage[citebordercolor={0 1 0}]{hyperref}                           % For creating hyperlinks in cross references
 \usepackage{footnotebackref}
@@ -81,9 +81,9 @@ $endif$
 \oddsidemargin3cm
 \evensidemargin3cm
 \setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}   
+\setcounter{tocdepth}{3}
 $if(space_between_paragraphs)$
-  \usepackage[parfill]{parskip} 
+  \usepackage[parfill]{parskip}
 $endif$
 
 % define line spacing = 1.5
@@ -152,13 +152,13 @@ $if(swedish)$
 \vspace{1.5cm}
 \begin{center}
 \begin{Large}
-{\bf $title$} 
+{\bf $title$}
 \end{Large}
 \end{center}
 \vskip1.5cm
 \renewcommand{\baselinestretch}{1}
 \begin{center}
-{\large $author$} 
+{\large $author$}
 \vskip2.5cm
 \begin{center}
 \begin{large}
@@ -167,9 +167,9 @@ $if(swedish)$
 \end{center}
 \vskip2cm
 {\large\it Handledare}\\
-{\large $advisor$} 
+{\large $advisor$}
 \vskip2cm
-{\large $year$} 
+{\large $year$}
 \end{center}\vfill
 $else$
 
@@ -183,13 +183,13 @@ $else$
 \vspace{1.5cm}
 \begin{center}
 \begin{Large}
-{\bf $title$} 
+{\bf $title$}
 \end{Large}
 \end{center}
 \vskip1.5cm
 \renewcommand{\baselinestretch}{1}
 \begin{center}
-{\large $author$} 
+{\large $author$}
 \vskip2.5cm
 \begin{center}
 \begin{large}
@@ -198,9 +198,9 @@ $else$
 \end{center}
 \vskip2cm
 {\large\it Advisor}\\
-{\large $advisor$} 
+{\large $advisor$}
 \vskip2cm
-{\large $year$} 
+{\large $year$}
 \end{center}\vfill
 $endif$
 
@@ -267,7 +267,7 @@ $endif$
 % --- main body of the thesis ---
 % -------------------------------
 \newpage
-\pagestyle{plain}       
+\pagestyle{plain}
 \setcounter{page}{1}    % start page numbering anew
 \pagenumbering{arabic}  % page numbers in arabic style
 
